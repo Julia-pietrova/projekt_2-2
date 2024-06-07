@@ -18,45 +18,46 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="text-bg-secondary p-3">
+    <main class="text-bg-secondary p-3 main">
       <div class="container-fluid overflow-hidden w-75">
-        <div class="row gy-5">
-          <div class="col-4 p-3 borde">
-            <img
-              class="card w-100"
-              style="width: 18rem"
-              src="https://ocdn.eu/pulscms-transforms/1/r6lk9kuTURBXy8yZWM0MWEwNC05NDc2LTRiMjQtYjYzYy02ZjkxMWJmMDU0NmQuanBlZ5GVAs0CZwDDw94AAaEwAQ"
-              alt="pieniądze"
-            />
-          </div>
-          <div class="col-8 p-3 borde text-center">
-            <h1>Przelicznik walut</h1>
-          </div>
-        </div>
+        <header class="row gy-5">
+            <div class="col-4 p-3 borde">
+              <img
+                class="card w-100"
+                style="width: 18rem"
+                src="https://ocdn.eu/pulscms-transforms/1/r6lk9kuTURBXy8yZWM0MWEwNC05NDc2LTRiMjQtYjYzYy02ZjkxMWJmMDU0NmQuanBlZ5GVAs0CZwDDw94AAaEwAQ"
+                alt="pieniądze"
+              />
+            </div>
+            <div class="col-8 p-3 borde text-center">
+              <h1>Przelicznik walut</h1>
+            </div>
+        </header>
         <div class="row align-middle">
-          <div class="col-3 p-3 borde">
-            <form>
-              <input
+            <form class="col-8 row align-middle">
+              <div class="col-5 p-3 borde">
+                <input
                 type="number"
                 size="20"
                 class="form-control"
                 placeholder="Kwota"
                 id="amount"
               />
-            </form>
-          </div>
-          <div class="col-2 p-3 borde">
-            <select class="form-select" id="currency">
-              <option value="eur">Euro (EUR)</option>
-              <option value="usd">US Dollar (USD)</option>
-              <option value="chf">Frank Szwajcarski (CHF)</option>
-            </select>
-          </div>
-          <div class="col-3 p-3 borde">
-            <button type="button" class="btn btn-light" id="convert">
-              Przelicz
-            </button>
-          </div>
+              </div>
+              
+              <div class="col-3 p-3 borde">
+                <select class="form-select" id="currency">
+                  <option value="eur">Euro (EUR)</option>
+                  <option value="usd">US Dollar (USD)</option>
+                  <option value="chf">Frank Szwajcarski (CHF)</option>
+                </select>
+              </div>
+              <div class="col-4 p-3 borde">
+                <button type="button" class="btn btn-light" id="convert">
+                  Przelicz
+                </button>
+              </div>
+            </form>         
           <div id="loader"></div>
           <div class="col-4 p-3 display-4" id="result"></div>
         </div>
